@@ -2,6 +2,7 @@ class QuotesController < ApplicationController
 	def index
         @quote = Quote.order("RANDOM()").last
 	end
+
 	def new
 		@quote = Quote.new
 	end
@@ -14,7 +15,7 @@ class QuotesController < ApplicationController
 private
 
 def quote_params
-	params.require(:quote).permit(:saying, :author)
+	params.require(:quote).permit(:saying, :author, :rating)
 end
 
 

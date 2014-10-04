@@ -5,8 +5,21 @@
         <%= @quote.saying %>
 		"
 	</h2>
+
 <p>
         <%= @quote.author %>
 	</p>
 
-</div>
+<p>
+	<% @quote.author %>
+</p>
+<h3>
+	Rating:
+	<% if @quote.rating %>
+	<%= @quote.rating %>
+	<% else%>
+	<i>None</i>
+	<% end %>
+	</h3>
+
+	</div>
